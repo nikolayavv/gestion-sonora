@@ -1,0 +1,16 @@
+{
+  "name": "gestion-sonora-backend",
+  "version": "1.0.0",
+  "description": "Backend de Gestion Sonora para prestamos de instrumentos musicales",
+  "license": "UNLICENSED",
+  "author": "nikolayavv",
+  "type": "commonjs",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikolayavv/gestion-sonora.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
