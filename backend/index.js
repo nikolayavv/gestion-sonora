@@ -1,12 +1,13 @@
 const express = require("express");
 const sequelize = require("./db");
 const app = express();
+const Instrumento = require("./models/instrumento");
 
 app.get("/", (req, res) => {
     res.send("Gestion Sonora");
 });
 
-async function testConn() {
+async function iniciarServidor() {
     try {
         await sequelize.authenticate();
         console.log("conexion comprobada");
@@ -14,9 +15,10 @@ async function testConn() {
             console.log("Servidor aca!");
         });
 
+
     } catch (error) {
-        console.log("Hubo un error: ", error.message);
+        console.error("Hubo un error: ", error.message);
     }
 }
 
-testConn();
+iniciarServidor();
