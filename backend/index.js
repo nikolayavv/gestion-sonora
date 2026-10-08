@@ -7,6 +7,17 @@ app.get("/", (req, res) => {
     res.send("Gestion Sonora");
 });
 
+
+app.get("/instrumentos", async(req, res) => {
+    try {
+        const instrumentos = await Instrumento.findAll();
+        res.json(instrumentos);
+    } catch (error) {
+        console.error("Hubo un error:", error);
+        res.status(500).json({mensaje: "No se pudieron cargar los registros."});
+    }
+});
+
 async function iniciarServidor() {
     try {
         await sequelize.authenticate();
